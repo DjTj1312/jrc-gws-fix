@@ -5,9 +5,9 @@
 # set to 0
 
 # next three lines are not needed!!
-import os
-os.environ['GDAL_DATA'] = r'C:\Users\Internet\anaconda3\envs\geo_env\Library\share\gdal'
-os.environ['PROJ_LIB'] = r'C:\Users\Internet\anaconda3\envs\geo_env\Library\share\proj'
+# import os
+# os.environ['GDAL_DATA'] = r'C:\Users\Internet\anaconda3\envs\geo_env\Library\share\gdal'
+# os.environ['PROJ_LIB'] = r'C:\Users\Internet\anaconda3\envs\geo_env\Library\share\proj'
 
 ###########
 #file = "seasonality_0E_10Nv1_4_2021.tif"
@@ -136,6 +136,7 @@ if __name__ == "__main__":
     import numpy as np
     from scipy import ndimage
     from datetime import datetime
+    import os
 
     st = datetime.now()
     start_time = st.strftime("%d/%m/%Y %H:%M:%S")
@@ -147,9 +148,9 @@ if __name__ == "__main__":
         os.makedirs(newpath)
 
     file_counter = 1
-    for file in os.listdir("D:\Riscognition\SAFERS\water_mask\seasonality_jrc"):
-        print(file, '(file ', file_counter, 'of ', len(os.listdir("D:\Riscognition\SAFERS\water_mask\seasonality_jrc")), ')')
-        all_in_one(file)
+    for file in os.listdir("test-data"):
+        print(file, '(file ', file_counter, 'of ', len(os.listdir("test-data")), ')')
+        all_in_one(os.path.join('test-data', file))
 
     et = datetime.now()
     current_time = et.strftime("%d/%m/%Y %H:%M:%S")
