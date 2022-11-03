@@ -5,6 +5,7 @@
 # set to 0
 
 # next three lines are not needed!!
+
 # import os
 # os.environ['GDAL_DATA'] = r'C:\Users\Internet\anaconda3\envs\geo_env\Library\share\gdal'
 # os.environ['PROJ_LIB'] = r'C:\Users\Internet\anaconda3\envs\geo_env\Library\share\proj'
