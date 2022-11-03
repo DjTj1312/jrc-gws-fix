@@ -1,4 +1,4 @@
-gdal==3.4.3
 numpy
+#gdal
 scipy
 matplotlib
